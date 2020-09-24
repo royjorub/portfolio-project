@@ -23,24 +23,48 @@ export default (props) => {
     const portfolioArr = [
         <PortfolioSection 
             title="Technical experience" 
-            mainContent="Lorem ipsum and other stuff"
+            mainContent="Adrian has matured in an age of technological wonders, varied and everchanging. He is adept with both the hard skills and soft skills needed to design software and control product developement as well as data engineering"
+            audioUrl="/audio/techincalexperiencequotes.mp3" // Audio file to play upon loading this session
+            imgSource="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/800px-The_Earth_seen_from_Apollo_17.jpg" // URL to image to display in that section
             bulletPoints={
                 [ // Array of objects - each object is a separate bullet point
                     {
-                        text: "Coding Dojo",
-                        info: "14-week course"
+                        text: "Programming Languages", // Actual text that goes next to bullet point
+                        info: "JavaScript, Java, Python, MATLAB, HTML, CSS, SQL, Excel" // Explanation that goes below the bullet point
                     },
                     {
-                        text: "Random",
-                        info: "More randomness"
-                    }
+                        text: "Experience With Frameworks And Libraries",
+                        info: "Django, Spring Boot, React, jQuesry, Bootstrap, Maven, Bcrypt"
+                    },
+                    {
+                        text: "Server Structures",
+                        info: "MySql, SQLite, MongoDB (NoSQL)"
+                    },
+                    {
+                        text: "Contribution To Projects",
+                        info: ""
+                    },
+                    {
+                        text: "Fire Emblem Heroes - Hero Tracker",
+                        externalLink: "https://www.google.com", // Link to site (OPTIONAL)
+                        info: "An app to help one keep track of all the heroes summoned in Fire Emblem Heroes, a mobile game.  Developed with Python and Django."
+                    },
+                    {
+                        text: "Fire Emblem Heroes - Orb Tracker",
+                        info: "Created an app to keep track of all the orbs, a unit of currency in the game, that one can obtain for free every day - includes the ability to calculate the number of orbs between two dates.  Developed with Java."
+                    },
+                    {
+                        text: "",
+                        info: ""
+                    },
                 ]
             }
-            // audioUrl="/audio/techincalexperiencequotes.mp3" // Audio file to play upon loading this session
         />,
         <PortfolioSection 
-            title="Skills" 
+            title="Career History and Education" 
             mainContent="Lorem ipsum and other stuff" 
+            audioUrl="/audio/careerhistorybackground.mp3"
+            imgSource="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/800px-The_Earth_seen_from_Apollo_17.jpg" // URL to image to display in that section
             bulletPoints={
                 [
                     {
@@ -49,9 +73,15 @@ export default (props) => {
                     }
                 ] 
             }
-            // audioUrl="/audio/skillsspeech.mp3"
+            // 
         />,
-        <PortfolioSection title="Placeholder 3" mainContent="Lorem ipsum and other stuff" bulletPoints={
+        <PortfolioSection 
+            title="Skills, Attributes and Accomplishments" 
+            mainContent="Lorem ipsum and other stuff" 
+            audioUrl="/audio/skillsspeech.mp3"
+            imgSource="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/800px-The_Earth_seen_from_Apollo_17.jpg" // URL to image to display in that section
+            
+            bulletPoints={
             [
                 {
                     text: "Coding Dojo",
@@ -59,23 +89,6 @@ export default (props) => {
                 }
             ]
         } />,
-        <PortfolioSection title="Placeholder 4" mainContent="Lorem ipsum and other stuff" bulletPoints={
-            [
-                {
-                    text: "Coding Dojo",
-                    info: "14-week course"
-                }
-            ]
-        } />,
-        <PortfolioSection title="Placeholder 5" mainContent="Lorem ipsum and other stuff" bulletPoints={
-            [
-                {
-                    text: "Coding Dojo",
-                    info: "14-week course"
-                }
-            ]
-        } />,
-        
     ];
 
     // Array of trivia questions
@@ -108,25 +121,10 @@ export default (props) => {
                 "Pick me!"]
             }
             sectionNum={addOne} />,
-        <TriviaQuestion question="What is the right answer?"
-            correctChoice="C"
-            possibleAnswers={
-                ["This isn't it",
-                "This is not right!",
-                "It's this one!",
-                "Don't pick me!"]
-            }
-            sectionNum={addOne} />,
-        <TriviaQuestion question="What is the right answer?"
-            correctChoice="B"
-            possibleAnswers={
-                ["This isn't it",
-                "This is!",
-                "It's not this one",
-                "Don't pick me!"]
-            }
-            sectionNum={addOne} />,
-        <FeedbackSection />
+        <FeedbackSection 
+            imgSource="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/800px-The_Earth_seen_from_Apollo_17.jpg" // Link to image goes here
+            summaryText="I hope you enjoyed the website. It was my pleasure creating it and presenting this information to you. Please feel free to contact me and leave a comment below." // Text that goes below the image 
+        />
     ];
 
     // useEffect(() => {

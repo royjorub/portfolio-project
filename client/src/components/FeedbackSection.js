@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../css/Feedback.css';
 
 export default (props) => {
+    const {imgSource, summaryText} = props;
     const [comments, setComments] = useState([]);
     const [name, setName] = useState("");
     const [comment, setComment] = useState("");
@@ -36,7 +37,14 @@ export default (props) => {
 
     return(
         <div>
+            <img style={{border: "2px solid black"}} src={imgSource} alt="SectionImage" width="200" height="200"></img>
+            <p>{summaryText}</p>
             <h3>Feedback:</h3>
+            <audio className="audio-element" autoPlay="true">
+                {/* Here you will change the name of the audio file */}
+                <source src="/audio/thankyoufortakingthetime.mp3" type="audio/mpeg"></source>
+            </audio>
+            
             <div className="prevFeedback">
             {comments.map((item,ind) => {
                 return(

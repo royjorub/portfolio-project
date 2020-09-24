@@ -1,25 +1,45 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Header.css'
+// import '../css/LoadingAnimation.css';
 import YouTube from 'react-youtube'; // Make sure to do "npm i react-youtube"!
-
+// import ReactCSSTransitionGroup from 'react-transition-group'; // Make sure to do "npm i"
 
 const Header = (props) => {
+    // const [time, setTime] = useState(0);
+
+    // setTimeout(()=>{
+    //     setTime(1);
+    // }, 1000)
+
+    // if (time === 1) { // When time is up (after 1 second)
+    //     // Play audio file at this point
+        
+    // }
+
     return (
         <div className="container">
-            <div class="topnav" id="myTopnav">
+            
+            <div className="topnav" id="myTopnav">
                 <div class="logoDiv">
-                    <p>Tural Hasanli</p>
+                    <p>Adrian Barnard</p>
+                    
                 </div>
-                <div class="menu-links">
+                <div className="menu-links">
                     {/* Change the links below as appropriate */}
-                    <a href="mailto: tural.tech@gmail.com">Email</a>
-                    <a href="https://github.com/thasanli">GitHub</a>
+                    <a href="#">Resume</a>
+                    <a href="mailto:pabarnard@outlook.com">Email</a>
+                    <a href="https://github.com/pbarnard1">GitHub</a>
                     <a href="https://www.linkedin.com/in/tural-hasanli-90910a118/">LinkedIn</a>
                 </div>
             </div>
             <div>
-                <YouTube videoId="2g811Eo7K8U" className="youtube" />
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto fugit sint unde vitae voluptatibus, veritatis, iusto veniam quo libero, voluptatum iure magni. Quis in, enim accusantium eaque veniam officia cum.</p>
+                {/* Change the ID of the video and change the message here as appropriate */}
+                <YouTube videoId="6caW0EDswRY" className="youtube" />
+                <p>Hi! I am Adrian and this portfolio is a culmination of my life's work and passions. I hope to guide you through an experience, of which in the end, you know me better and can assert that I would be a pretty nifty dinner guest.</p>
+                <audio className="audio-element" autoPlay={true}>
+                    {/* Here you will change the name of the audio file */}
+                    <source src="/audio/welcomeAdrians.mp3" type="audio/mpeg"></source>
+                </audio>
             </div>
         </div>
     );

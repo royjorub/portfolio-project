@@ -3,7 +3,7 @@ import '../css/Trivia.css';
 
 export default (props) => {
     const {question, correctChoice, possibleAnswers} = props; // Destructuring so we get the field names immediately
-    const letterArr = ["A", "B", "C", "D"];
+    // const letterArr = ["A", "B", "C", "D"];
     const [selectedAnswers, setSelectedAnswers] = useState([false, false, false, false]);
     const [curStyles, setCurStyles] = useState(["unpicked","unpicked","unpicked","unpicked"])
     const [selectedRightAnswer, setSelectedRightAnswer] = useState(false); // Boolean for determining if user picked right answer
@@ -18,7 +18,7 @@ export default (props) => {
             const randIndex = Math.floor(Math.random()*randomIntArr.length);
             const randVal = randomIntArr[randIndex];
             // console.log("Index = "+randIndex+", value = "+randVal);
-            const soundUrl = "/audio/incorrect"+randVal+".mp3";
+            const soundUrl = "/incorrectAudio/incorrect"+randVal+".mp3";
             newSoundArr.push(soundUrl);
             randomIntArr = randomIntArr.filter((val,ind) => {return ind !== randIndex});
             // console.log(randomIntArr);
@@ -109,11 +109,9 @@ export default (props) => {
     // To do: perhaps simplify the CSS for the hexagons for the answers
     // Get the big hexagon to work for the question
     // Align the text in the answers so it's centered vertically
-    return(
-        <div>
-            
-            <div className="hexagonQuestion"><p>{question}</p></div>
-            {possibleAnswers.map((answerChoice,ind) => {
+
+    /*
+    {possibleAnswers.map((answerChoice,ind) => {
                 const curLetterChoice = letterArr[ind];
                 console.log(soundArr[ind]);
                 return(
@@ -129,6 +127,53 @@ export default (props) => {
                     </div>
                 );
             })}
+    */
+    return(
+        <div>
+            
+            <div className="hexagonQuestion"><p>{question}</p></div>
+            <div className="allAnswers">
+                <div className="answerRow">
+                    <div 
+                        className={"hexagon "+curStyles[0]}
+                        onClick={e => {"A" === correctChoice ? handleCorrectAnswer(e,0) : handleWrongAnswer(e,0)}}
+                    >
+                        <audio className="audio-element">
+                            <source src={soundArr[0]} type="audio/mpeg" ></source>
+                        </audio>
+                        {"A: " + possibleAnswers[0]}
+                    </div>
+                    <div 
+                        className={"hexagon "+curStyles[1]}
+                        onClick={e => {"B" === correctChoice ? handleCorrectAnswer(e,1) : handleWrongAnswer(e,1)}}
+                    >
+                        <audio className="audio-element">
+                            <source src={soundArr[1]} type="audio/mpeg" ></source>
+                        </audio>
+                        {"B: " + possibleAnswers[1]}
+                    </div>
+                </div>
+                <div className="answerRow">
+                    <div 
+                        className={"hexagon "+curStyles[2]}
+                        onClick={e => {"C" === correctChoice ? handleCorrectAnswer(e,2) : handleWrongAnswer(e,2)}}
+                    >
+                        <audio className="audio-element">
+                            <source src={soundArr[2]} type="audio/mpeg" ></source>
+                        </audio>
+                        {"C: " + possibleAnswers[2]}
+                    </div>
+                    <div 
+                        className={"hexagon "+curStyles[3]}
+                        onClick={e => {"D" === correctChoice ? handleCorrectAnswer(e,3) : handleWrongAnswer(e,3)}}
+                    >
+                        <audio className="audio-element">
+                            <source src={soundArr[3]} type="audio/mpeg" ></source>
+                        </audio>
+                        {"D: " + possibleAnswers[3]}
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
