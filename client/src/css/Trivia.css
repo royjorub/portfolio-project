@@ -1,0 +1,77 @@
+.hexagonQuestion {
+    background-color: purple; 
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    color: white; 
+    padding-top: 20px;
+    padding-bottom: 20px; 
+    margin: 1%;
+}
+
+.hexagon {
+    text-align: left;
+    font-size: 14px;
+    width: 200px;
+    height: 30px;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+    position: relative;
+    margin: 20px;
+    background-color: purple;
+    color: white;
+}
+
+.hexagon:before, .hexagon:after {
+    background-color: purple;
+    content: "";
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.hexagon:before {
+    border-left: 3px solid #000;
+    border-bottom: 3px solid #000;
+    top: 3px;
+    left: -13px;
+}
+
+.hexagon:after {
+    border-right: 3px solid #000;
+    border-top: 3px solid #000;
+    top: 3px;
+    right: -13px;
+}
+
+.unpicked, .finalAnswer, .wrongAnswer {
+    margin-left: 2%;
+    width: 43%;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.finalAnswer, .finalAnswer:before, .finalAnswer:after {
+    background-color: orange;
+    color: black;
+    /* animation-name: showFinalAnswer;
+    animation-duration: 0.5s; */
+}
+
+/* @keyframes showFinalAnswer {
+    from {background-color: purple;}
+    to {background-color: orange; color: black}
+} */
+
+.wrongAnswer, .wrongAnswer:before, .wrongAnswer:after {
+    background-color: red;
+    color: black;
+    /* animation-name: showWrongAnswer;
+    animation-duration: 0.5s; */
+}
+
+/* @keyframes showWrongAnswer {
+    from {background-color: orange;}
+    to {background-color: red;}
+} */
