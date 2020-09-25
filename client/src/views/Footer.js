@@ -10,10 +10,10 @@ const Footer = (props) => {
             <div class="topnav" id="myTopnav">
                 <div class="menu-links">
                     {/* Change contact information below */}
-                    <a href="#">Resume</a>
-                    <a href="mailto: tural.tech@gmail.com">Email</a>
-                    <a href="https://github.com/thasanli">GitHub</a>
-                    <a href="https://www.linkedin.com/in/tural-hasanli-90910a118/">LinkedIn</a>
+                    <a href="https://docs.google.com/document/d/118XOT90Vu0z7CnojyWOSlOugpJUEvuqfruH6StdXM1c" target="_blank">Resume</a>
+                    <a href="mailto:pabarnard@outlook.com" target="_blank">Email</a>
+                    <a href="https://github.com/pbarnard1" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
                 </div>
             </div>
         </div>

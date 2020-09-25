@@ -26,16 +26,16 @@ const Header = (props) => {
                 </div>
                 <div className="menu-links">
                     {/* Change the links below as appropriate */}
-                    <a href="#">Resume</a>
-                    <a href="mailto:pabarnard@outlook.com">Email</a>
-                    <a href="https://github.com/pbarnard1">GitHub</a>
-                    <a href="https://www.linkedin.com/in/tural-hasanli-90910a118/">LinkedIn</a>
+                    <a href="https://docs.google.com/document/d/118XOT90Vu0z7CnojyWOSlOugpJUEvuqfruH6StdXM1c" target="_blank">Resume</a>
+                    <a href="mailto:pabarnard@outlook.com" target="_blank">Email</a>
+                    <a href="https://github.com/pbarnard1" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
                 </div>
             </div>
             <div className="youtubeIntroduction"  >
                 {/* Change the ID of the video and change the message here as appropriate */}
                 <div className="introduction">
-                    <p>Hello. This portfolio is a culmination of my life's work and passions. I hope to guide you through an experience, of which in the end, you know me better and can assert that I would be a pretty nifty dinner guest.</p>
+                    <p>Hello! This portfolio is a culmination of my life's work and passions. I hope to guide you through an experience, of which in the end, you know me better and can assert that I would be a pretty nifty dinner guest.</p>
                 </div>
                 <div>
                     <YouTube videoId="6caW0EDswRY" className="youtube" />
