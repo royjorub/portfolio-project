@@ -1,9 +1,91 @@
 .prevFeedback {
     display: inline-block;
-    border: 1px solid black;
     width: 100%;
     height: 200px;
     overflow-y: scroll;
     /* scrollbar-color: rebeccapurple green; */
     scrollbar-width: thin;
+}
+
+.prevFeedback span{
+    font-size: 25px;
+}
+
+.example1 {
+    height: 50px;	
+    overflow: hidden;
+    position: relative;
+    margin: 20px 0;
+   }
+   .example1 h3 {
+    font-size: 3em;
+    color: #504CF7;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);	
+    transform:translateX(100%);
+    /* Apply animation to this element */	
+    -moz-animation: example1 15s linear infinite;
+    -webkit-animation: example1 15s linear infinite;
+    animation: example1 15s linear infinite;
+   }
+   /* Move it (define the animation) */
+   @-moz-keyframes example1 {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+   }
+   @-webkit-keyframes example1 {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+   }
+   @keyframes example1 {
+    0%   { 
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%); 		
+    }
+    100% { 
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%); 
+    }
+}
+
+.nameInput{
+    width: 350px;
+    height: 30px;
+}
+
+.textInput, .nameInput{
+    font-size: 30px;
+}
+
+.bttm-container{
+    background-color: rgb(244, 248, 248);
+    box-shadow: 0px 0px 5px 5px rgb(206, 211, 210);
+    padding: 15px;
+}
+
+.commentBtn{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(79, 76, 247);
+    text-decoration: none;
+    font-size: 25px;
+    border: 1px solid #431cd1;
+    padding: 5px;
+    font-weight: bolder;
+    height: 50px;
+    width: 180px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 0 auto;
 }

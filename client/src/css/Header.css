@@ -1,3 +1,4 @@
+
 .topnav a {
     display: flex;
     align-items: center;
@@ -8,8 +9,8 @@
     border: 1px solid #431cd1;
     padding: 5px;
     font-weight: bolder;
-    height: 40px;
-    width: 100px;
+    height: 30px;
+    width: 90px;
     border-radius: 40px;
     margin: 12px;
 }
@@ -21,38 +22,86 @@
 
 
 @media screen and (max-width: 600px) {
-    .topnav{
-        display: flex;
-        flex-direction: column-reverse;
-    }
     .menu-links{
         display: flex;
         flex-direction: row;
-    }
-    .youtube{
-        width: 400px;
+        margin: 0 auto;
     }
     .logoDiv{
         display: flex;
         justify-content: center;
-        margin-top: -20px;
+        margin-top: -25px;
     }
+    .topnav{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .youtubeIntroduction{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .youtubeIntroduction p{
+        display: flex;
+        font-size: 35px;
+        margin-top: 60px;
+        width: 200px;
+        background-color: rgb(244, 248, 248);
+    }
+    .youtube{
+        width: 400px;
+    }
+    *{
+        background-color: rgb(244, 248, 248);
+    }
+
+    
 }
+
+
+.youtubeIntroduction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgb(244, 248, 248);
+    margin: 0 40px 0 40px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 5px 5px rgb(206, 211, 210);
+    margin-bottom: 20px;
+
+
+}
+.youtubeIntroduction p{
+    display: flex;
+    font-size: 35px;
+    margin-top: 60px;
+    width: 500px;
+}
+.youtubeIntroduction div{
+    margin: 30px;
+}
+.youtube{
+    width: 700px;
+}
+
 
 .topnav{
     display: flex;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
+    background-color: rgb(244, 248, 248);
 }
 .logoDiv{
-    margin-left: 30px;
+    margin-left: 50px;
     font-size: 35px;
     min-width: 50px;
+    font-weight: bolder;
 }
 .menu-links{
     display: flex;
     justify-content: space-evenly;
+    margin-right: 40px;
 }
+
 
 
 /* ---> FOOTER  <---- */
@@ -95,6 +144,9 @@
         display: flex;
         flex-direction: row;
     }
+    .youtubeIntroduction{
+        all: unset;
+    }
 }
 
 .topnav-footer{
@@ -108,3 +160,10 @@
     justify-content: space-evenly;
     background-color: aquamarine;
 }
+.container-footer{
+    background-color: rgb(244, 248, 248);
+    box-shadow: 0px 0px 5px 5px rgb(206, 211, 210)
+
+}
+
+

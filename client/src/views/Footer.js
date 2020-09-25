@@ -7,8 +7,8 @@ const Footer = (props) => {
 
     return (
         <div className="container-footer">
-            <div class="topnav-footer" id="myTopnav-footer">
-                <div class="menu-links-footer">
+            <div class="topnav" id="myTopnav">
+                <div class="menu-links">
                     {/* Change contact information below */}
                     <a href="#">Resume</a>
                     <a href="mailto: tural.tech@gmail.com">Email</a>

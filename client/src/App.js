@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import MainPage from './views/MainPage';
-import LoadingAnimation from './components/LoadingAnimation';
 // import Header from './views/Header';
 // import Footer from './views/Footer';
 // import ThankYou from './components/ThankYouAnimation';
@@ -9,13 +8,16 @@ import LoadingAnimation from './components/LoadingAnimation';
 // Tural's
 function App() {
     const [animation, setAnimation] = useState(0);
-  
+
     setTimeout(function () { setAnimation(1) }, 2500);
-  
+
     if (animation === 0) {
         return (
             <div className="App">
-                <LoadingAnimation />
+                <div className="animationGif">
+                    <img src="https://media4.giphy.com/media/14c0YMK7oEVs0o/giphy.gif?cid=ecf05e4776154f5aadf822b6b6e41d9e95c99308247496ec&rid=giphy.gif" alt="" />
+                </div>
+
             </div>
         );
     }
